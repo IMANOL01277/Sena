@@ -1,0 +1,117 @@
+.contacto{
+    border: 1px;
+    border-radius: 20px;
+    border-style: double;
+    margin: 20px;
+    text-align: center;
+}
+
+
+.contenido{
+    border: 1px;
+    border-radius: 20px;
+    border-style: double;
+    margin: 100px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgb(255, 255, 255);
+}
+
+.flex-container > div {
+    
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.introducion {
+    display: grid;
+    gap: 50px 100px;
+    grid-template-columns: auto auto;
+    
+    padding: 10px;
+}
+
+.introducion > div {
+    
+    padding: 20px;
+    font-size:  30px;
+    text-align: center;
+}
+
+.ab{
+    margin: 0px;
+    padding: 20px;
+}
+
+.info{
+    display: grid;
+    gap: 50px 100px;
+    grid-template-columns: auto auto auto;
+    
+    padding: 10px;
+}
+
+.info > div {
+    color: #006c00;
+    border: #006c00 solid 1px;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+    .introducion {
+        grid-template-columns: 1fr; /* Pasa a una sola columna */
+        text-align: center;
+    }
+
+    .introducion img {
+        max-width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .info {
+        grid-template-columns: 1fr 1fr; /* Solo 2 columnas en tablets */
+    }
+}
+
+@media (max-width: 425px) {
+    .contenido {
+        margin: 40px 20px; /* Reduce los márgenes */
+        padding: 20px;
+    }
+
+    .flex-container {
+        flex-direction: column; /* Los botones se apilan */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .ab {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .introducion {
+        grid-template-columns: 1fr; /* Texto arriba, imagen abajo */
+        text-align: center;
+    }
+
+    .info {
+        grid-template-columns: 1fr; /* Cada cuadro en una fila */
+        gap: 15px;
+    }
+}
